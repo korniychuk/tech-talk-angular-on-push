@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { INTERVAL_FEATURE_URL } from './+01-interval/interval.feature-url';
 import { MOUSE_MOVE_FEATURE_URL } from './+02-mouse-move/mouse-move.feature-url';
+import { INPUT_CHANGE_1_FEATURE_URL } from './+11-on-push--input-change-1/input-change-1.feature-url';
 
 @Component({
   selector: 'app-root',
@@ -33,6 +34,10 @@ export class AppComponent {
     {
       label: 'Mouse Move',
       path: MOUSE_MOVE_FEATURE_URL,
+    },
+    {
+      label: 'OnPush | Input change',
+      path: INPUT_CHANGE_1_FEATURE_URL,
     },
   ];
 }

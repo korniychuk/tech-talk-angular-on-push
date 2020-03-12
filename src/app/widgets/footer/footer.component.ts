@@ -17,13 +17,13 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   template: `
     &copy; <a href="//www.korniychuk.pro" target="_blank">Anton Korniychuk</a> {{ year }}
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FooterComponent {
   public counter: number = 0;
 
   public get year(): number {
-    console.log('year getter: ', this.counter++);
+    // console.log('year getter: ', this.counter++);
     return new Date().getFullYear();
   }
 

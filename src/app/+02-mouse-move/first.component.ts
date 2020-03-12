@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-first',
@@ -16,7 +16,8 @@ import { Component, HostListener, OnInit } from '@angular/core';
       background-color: #bbf;
       border: 2px dashed #333;
     }
-  ` ]
+  ` ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FirstComponent {
 
