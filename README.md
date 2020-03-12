@@ -1,5 +1,14 @@
 # Angular OnPush from A to Z
 
+## Info
+
+* How to trigger change detection with OnPush
+  1. The Input reference changes.
+  2. An event originated from the component or one of its children.
+  3. We run change detection explicitly.
+  4. Angular Async Pipe
+* Use `ApplicationRef.isStable` and `NgZone.runOutsideAngular()`
+
 ## Quick Start
 
 ```bash
