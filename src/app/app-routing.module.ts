@@ -12,6 +12,7 @@ import { EVENT_CHILDREN_FEATURE_URL } from './+22-on-push--event-children/event-
 import { OTHER_MICROTASKS_FEATURE_URL } from './+03-other-microtasks/other-mickrotasks.feature-url';
 import { RUN_EXPLICITLY_FEATURE_URL } from './+31-on-push--run-explicitly/run-explicitly.feature-url';
 import { RUN_EXPLICITLY_VIA_TICK_FEATURE_URL } from './+32-on-push--run-explicitly-via-tick/run-explicitly-via-tick.feature-url';
+import { ASYNC_PIPE_FEATURE_URL } from './+41-on-push-async-pipe/async-pipe.feature-url';
 
 const routes: Routes = [
   {
@@ -63,6 +64,10 @@ const routes: Routes = [
     path: RUN_EXPLICITLY_VIA_TICK_FEATURE_URL,
     loadChildren: () => import('./+32-on-push--run-explicitly-via-tick/run-explicitly-via-tick.module')
       .then(m => m.RunExplicitlyViaTickModule),
+  },
+  {
+    path: ASYNC_PIPE_FEATURE_URL,
+    loadChildren: () => import('./+41-on-push-async-pipe/async-pipe.module').then(m => m.AsyncPipeModule),
   },
 ];
 
