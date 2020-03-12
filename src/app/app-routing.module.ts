@@ -3,7 +3,8 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 import { INTERVAL_FEATURE_URL } from './+01-interval/interval.feature-url';
 import { MOUSE_MOVE_FEATURE_URL } from './+02-mouse-move/mouse-move.feature-url';
-import { INPUT_CHANGE_1_FEATURE_URL } from './+11-on-push--input-change-1/input-change-1.feature-url';
+import { INPUT_CHANGE_STRING_FEATURE_URL } from './+11-on-push--input-change-string/input-change-string.feature-url';
+import { INPUT_CHANGE_OBJECT_FEATURE_URL } from './+12-on-push--input-change-object/input-change-object.feature-url';
 
 const routes: Routes = [
   {
@@ -20,8 +21,12 @@ const routes: Routes = [
     loadChildren: () => import('./+02-mouse-move/mouse-move.module').then(m => m.MouseMoveModule),
   },
   {
-    path: INPUT_CHANGE_1_FEATURE_URL,
-    loadChildren: () => import('./+11-on-push--input-change-1/input-change-1.module').then(m => m.InputChange1Module),
+    path: INPUT_CHANGE_STRING_FEATURE_URL,
+    loadChildren: () => import('./+11-on-push--input-change-string/input-change-string.module').then(m => m.InputChangeStringModule),
+  },
+  {
+    path: INPUT_CHANGE_OBJECT_FEATURE_URL,
+    loadChildren: () => import('./+12-on-push--input-change-object/input-change-object.module').then(m => m.InputChangeObjectModule),
   },
 ];
 

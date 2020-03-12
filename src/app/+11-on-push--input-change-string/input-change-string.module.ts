@@ -19,4 +19,4 @@ const routes: Routes = [
     RouterModule.forChild(routes),
   ],
 })
-export class InputChange1Module { }
+export class InputChangeStringModule { }
