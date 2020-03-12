@@ -1,13 +1,10 @@
-// tslint:disable:member-ordering
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-counter',
+  selector: 'app-parent',
   template: `
-    <div>
-      <button (click)="add()">Add</button> {{ count }}<br>
-      Interval counter: {{ num }}
-    </div>
+    Interval counter: {{ num }}
+    <app-counter></app-counter>
   `,
   styles: [ `
     :host {
@@ -20,15 +17,7 @@ import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/
   ` ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CounterComponent implements OnInit, OnDestroy {
-
-  public count: number = 0;
-  public add(): void {
-    this.count++;
-  }
-
-
-
+export class ParentComponent implements OnInit, OnDestroy {
 
   public num: number = 0;
   private ref?: ReturnType<typeof setInterval>;
@@ -38,7 +27,7 @@ export class CounterComponent implements OnInit, OnDestroy {
 
     this.ref = setInterval(() => {
       this.num++;
-      console.log(`${CounterComponent.name} Number updated:`, this.num);
+      console.log(`${ParentComponent.name} Number updated:`, this.num);
     }, 1000);
   }
 

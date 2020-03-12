@@ -7,6 +7,7 @@ import { INPUT_CHANGE_OBJECT_FEATURE_URL } from './+12-on-push--input-change-obj
 import { INPUT_CHANGE_NESTED_FEATURE_URL } from './+13-on-push--input-change-nested/input-change-nested.feature-url';
 import { INPUT_CHANGE_NESTED_2_FEATURE_URL } from './+14-on-push--input-change-nested-2/input-change-nested-2.feature-url';
 import { EVENT_FEATURE_URL } from './+21-on-push--event/event.feature-url';
+import { EVENT_CHILDREN_FEATURE_URL } from './+22-on-push--event-children/event-children.feature-url';
 
 @Component({
   selector: 'app-root',
@@ -59,6 +60,10 @@ export class AppComponent {
     {
       label: 'OnPush | Event',
       path: EVENT_FEATURE_URL,
+    },
+    {
+      label: 'OnPush | Event from Children',
+      path: EVENT_CHILDREN_FEATURE_URL,
     },
   ];
 }

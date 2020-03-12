@@ -8,6 +8,7 @@ import { INPUT_CHANGE_OBJECT_FEATURE_URL } from './+12-on-push--input-change-obj
 import { INPUT_CHANGE_NESTED_FEATURE_URL } from './+13-on-push--input-change-nested/input-change-nested.feature-url';
 import { INPUT_CHANGE_NESTED_2_FEATURE_URL } from './+14-on-push--input-change-nested-2/input-change-nested-2.feature-url';
 import { EVENT_FEATURE_URL } from './+21-on-push--event/event.feature-url';
+import { EVENT_CHILDREN_FEATURE_URL } from './+22-on-push--event-children/event-children.feature-url';
 
 const routes: Routes = [
   {
@@ -42,6 +43,10 @@ const routes: Routes = [
   {
     path: EVENT_FEATURE_URL,
     loadChildren: () => import('./+21-on-push--event/event.module').then(m => m.EventModule),
+  },
+  {
+    path: EVENT_CHILDREN_FEATURE_URL,
+    loadChildren: () => import('./+22-on-push--event-children/event-children.module').then(m => m.EventChildrenModule),
   },
 ];
 
