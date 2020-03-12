@@ -9,6 +9,7 @@ import { INPUT_CHANGE_NESTED_FEATURE_URL } from './+13-on-push--input-change-nes
 import { INPUT_CHANGE_NESTED_2_FEATURE_URL } from './+14-on-push--input-change-nested-2/input-change-nested-2.feature-url';
 import { EVENT_FEATURE_URL } from './+21-on-push--event/event.feature-url';
 import { EVENT_CHILDREN_FEATURE_URL } from './+22-on-push--event-children/event-children.feature-url';
+import { OTHER_MICROTASKS_FEATURE_URL } from './+03-other-microtasks/other-mickrotasks.feature-url';
 
 const routes: Routes = [
   {
@@ -19,6 +20,10 @@ const routes: Routes = [
   {
     path: INTERVAL_FEATURE_URL,
     loadChildren: () => import('./+01-interval/interval.module').then(m => m.IntervalModule),
+  },
+  {
+    path: OTHER_MICROTASKS_FEATURE_URL,
+    loadChildren: () => import('./+03-other-microtasks/other-microtasks.module').then(m => m.OtherMicrotasksModule),
   },
   {
     path: MOUSE_MOVE_FEATURE_URL,
