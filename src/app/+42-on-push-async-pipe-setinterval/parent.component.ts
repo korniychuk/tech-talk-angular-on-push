@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-parent',
@@ -20,8 +20,11 @@ import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/
 export class ParentComponent implements OnInit, OnDestroy {
 
   public num: number = 0;
-
   private ref?: ReturnType<typeof setInterval>;
+
+  public constructor(
+    // private readonly $cdr: ChangeDetectorRef,
+  ) {}
 
   public ngOnInit(): void {
     if (this.ref) return;
@@ -29,6 +32,8 @@ export class ParentComponent implements OnInit, OnDestroy {
     this.ref = setInterval(() => {
       this.num++;
       console.log('num changed', this.num);
+      // this.$cdr.detectChanges();
+      // this.$cdr.markForCheck();
     }, 1000);
   }
 

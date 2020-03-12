@@ -13,16 +13,17 @@ export class TimerComponent implements OnInit {
   public count: number = 0;
 
   public constructor(
-    // private readonly $cdr: ChangeDetectorRef,
+    private readonly $cdr: ChangeDetectorRef,
     private readonly $applicationRef: ApplicationRef,
   ) {}
 
   public ngOnInit() {
     setTimeout(() => {
       this.count = 5;
+      // this.$cdr.markForCheck();
       this.$applicationRef.tick();
       // this.$cdr.detectChanges();
-      console.log('TICK (doesn\`t work in Angular 9)');
+      console.log('TICK');
     }, 1000);
   }
 }
