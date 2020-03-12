@@ -31,7 +31,6 @@ export class ChildComponent implements OnInit, OnDestroy {
   public label: string = 'Default Label';
 
   public num: number = 0;
-
   private ref?: ReturnType<typeof setInterval>;
 
   public ngOnInit(): void {
