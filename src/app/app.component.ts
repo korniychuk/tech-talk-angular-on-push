@@ -13,6 +13,7 @@ import { RUN_EXPLICITLY_FEATURE_URL } from './+31-on-push--run-explicitly/run-ex
 import { RUN_EXPLICITLY_VIA_TICK_FEATURE_URL } from './+32-on-push--run-explicitly-via-tick/run-explicitly-via-tick.feature-url';
 import { ASYNC_PIPE_FEATURE_URL } from './+41-on-push-async-pipe/async-pipe.feature-url';
 import { ASYNC_PIPE_INTERVAL_FEATURE_URL } from './+42-on-push-async-pipe-setinterval/async-pipe-interval.feature-url';
+import { TABS_FEATURE_URL } from './+51-tabs/tabs.feature-url';
 
 @Component({
   selector: 'app-root',
@@ -89,6 +90,10 @@ export class AppComponent {
     {
       label: 'On Push | Async Pipe | Interval',
       path: ASYNC_PIPE_INTERVAL_FEATURE_URL,
+    },
+    {
+      label: 'Tabs',
+      path: TABS_FEATURE_URL,
     },
   ];
 }
