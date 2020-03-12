@@ -11,6 +11,7 @@ import { EVENT_FEATURE_URL } from './+21-on-push--event/event.feature-url';
 import { EVENT_CHILDREN_FEATURE_URL } from './+22-on-push--event-children/event-children.feature-url';
 import { OTHER_MICROTASKS_FEATURE_URL } from './+03-other-microtasks/other-mickrotasks.feature-url';
 import { RUN_EXPLICITLY_FEATURE_URL } from './+31-on-push--run-explicitly/run-explicitly.feature-url';
+import { RUN_EXPLICITLY_VIA_TICK_FEATURE_URL } from './+32-on-push--run-explicitly-via-tick/run-explicitly-via-tick.feature-url';
 
 const routes: Routes = [
   {
@@ -58,11 +59,16 @@ const routes: Routes = [
     path: RUN_EXPLICITLY_FEATURE_URL,
     loadChildren: () => import('./+31-on-push--run-explicitly/run-explicitly.module').then(m => m.RunExplicitlyModule),
   },
+  {
+    path: RUN_EXPLICITLY_VIA_TICK_FEATURE_URL,
+    loadChildren: () => import('./+32-on-push--run-explicitly-via-tick/run-explicitly-via-tick.module')
+      .then(m => m.RunExplicitlyViaTickModule),
+  },
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
+    RouterModule.forRoot(routes ),
   ],
   exports: [RouterModule]
 })
