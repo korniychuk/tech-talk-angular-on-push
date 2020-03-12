@@ -9,6 +9,7 @@ import { INPUT_CHANGE_NESTED_2_FEATURE_URL } from './+14-on-push--input-change-n
 import { EVENT_FEATURE_URL } from './+21-on-push--event/event.feature-url';
 import { EVENT_CHILDREN_FEATURE_URL } from './+22-on-push--event-children/event-children.feature-url';
 import { OTHER_MICROTASKS_FEATURE_URL } from './+03-other-microtasks/other-mickrotasks.feature-url';
+import { RUN_EXPLICITLY_FEATURE_URL } from './+31-on-push--run-explicitly/run-explicitly.feature-url';
 
 @Component({
   selector: 'app-root',
@@ -69,6 +70,10 @@ export class AppComponent {
     {
       label: 'OnPush | Event from Children',
       path: EVENT_CHILDREN_FEATURE_URL,
+    },
+    {
+      label: 'On Push | Run Explicitly',
+      path: RUN_EXPLICITLY_FEATURE_URL,
     },
   ];
 }

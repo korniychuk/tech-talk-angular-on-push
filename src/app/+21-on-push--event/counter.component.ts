@@ -4,6 +4,7 @@ import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/
 @Component({
   selector: 'app-counter',
   template: `
+    <h3>2. An event originated from the component or one of its children.</h3>
     <div>
       <button (click)="add()">Add</button> {{ count }}<br>
       Interval counter: {{ num }}

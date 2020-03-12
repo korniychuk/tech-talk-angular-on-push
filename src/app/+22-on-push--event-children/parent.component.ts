@@ -3,6 +3,7 @@ import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/
 @Component({
   selector: 'app-parent',
   template: `
+    <h3>2. An event originated from the component or one of its children.</h3>
     Interval counter: {{ num }}
     <app-counter></app-counter>
   `,

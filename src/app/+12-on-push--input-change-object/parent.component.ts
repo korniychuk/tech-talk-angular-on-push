@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 
+// /** Returns false in our case */
+// if( oldValue !== newValue ) {
+//   runChangeDetection();
+// }
+
 @Component({
   selector: 'app-parent',
   template: `
