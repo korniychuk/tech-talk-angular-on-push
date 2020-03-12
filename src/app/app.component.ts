@@ -17,7 +17,8 @@ import { TABS_FEATURE_URL } from './+51-tabs/tabs.feature-url';
 import { TABS_2_FEATURE_URL } from './+51-tabs-2/tabs-2.feature-url';
 import { TODO_LIST_FEATURE_URL } from './+52-todo-list/todo-list.feature-url';
 import { TODO_LIST_2_FEATURE_URL } from './+52-todo-list-2/todo-list-2.feature-url';
-import { IS_STABLE_FEATURE_URL } from './+62-is-stable/is-stable.feature-url';
+import { IS_STABLE_FEATURE_URL } from './+61-is-stable/is-stable.feature-url';
+import { RIGHT_MOUSE_MOVE_FEATURE_URL } from './+62-right-mouse-move/right-mouse-move.feature-url';
 
 @Component({
   selector: 'app-root',
@@ -123,6 +124,10 @@ export class AppComponent {
     {
       label: 'Is Stable',
       path: IS_STABLE_FEATURE_URL,
+    },
+    {
+      label: 'Right Mouse Move',
+      path: RIGHT_MOUSE_MOVE_FEATURE_URL,
     },
   ];
 }
