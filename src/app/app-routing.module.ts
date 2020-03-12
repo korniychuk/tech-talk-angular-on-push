@@ -15,6 +15,7 @@ import { RUN_EXPLICITLY_VIA_TICK_FEATURE_URL } from './+32-on-push--run-explicit
 import { ASYNC_PIPE_FEATURE_URL } from './+41-on-push-async-pipe/async-pipe.feature-url';
 import { ASYNC_PIPE_INTERVAL_FEATURE_URL } from './+42-on-push-async-pipe-setinterval/async-pipe-interval.feature-url';
 import { TABS_FEATURE_URL } from './+51-tabs/tabs.feature-url';
+import { TABS_2_FEATURE_URL } from './+51-tabs-2/tabs-2.feature-url';
 
 const routes: Routes = [
   {
@@ -78,6 +79,10 @@ const routes: Routes = [
   {
     path: TABS_FEATURE_URL,
     loadChildren: () => import('./+51-tabs/tabs.module').then(m => m.TabsModule),
+  },
+  {
+    path: TABS_2_FEATURE_URL,
+    loadChildren: () => import('./+51-tabs-2/tabs-2.module').then(m => m.Tabs2Module),
   },
 ];
 
