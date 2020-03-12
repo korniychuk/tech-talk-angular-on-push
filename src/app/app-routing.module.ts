@@ -13,6 +13,7 @@ import { OTHER_MICROTASKS_FEATURE_URL } from './+03-other-microtasks/other-mickr
 import { RUN_EXPLICITLY_FEATURE_URL } from './+31-on-push--run-explicitly/run-explicitly.feature-url';
 import { RUN_EXPLICITLY_VIA_TICK_FEATURE_URL } from './+32-on-push--run-explicitly-via-tick/run-explicitly-via-tick.feature-url';
 import { ASYNC_PIPE_FEATURE_URL } from './+41-on-push-async-pipe/async-pipe.feature-url';
+import { ASYNC_PIPE_INTERVAL_FEATURE_URL } from './+42-on-push-async-pipe-setinterval/async-pipe-interval.feature-url';
 
 const routes: Routes = [
   {
@@ -68,6 +69,10 @@ const routes: Routes = [
   {
     path: ASYNC_PIPE_FEATURE_URL,
     loadChildren: () => import('./+41-on-push-async-pipe/async-pipe.module').then(m => m.AsyncPipeModule),
+  },
+  {
+    path: ASYNC_PIPE_INTERVAL_FEATURE_URL,
+    loadChildren: () => import('./+42-on-push-async-pipe-setinterval/async-pipe-interval.module').then(m => m.AsyncPipeIntervalModule),
   },
 ];
 
