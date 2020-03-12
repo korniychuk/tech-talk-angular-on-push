@@ -20,9 +20,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FooterComponent {
+  public counter: number = 0;
 
   public get year(): number {
-    console.log('year getter');
+    console.log('year getter: ', this.counter++);
     return new Date().getFullYear();
   }
 

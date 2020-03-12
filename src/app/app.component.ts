@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { INTERVAL_FEATURE_URL } from './+ex-01-interval/interval.feature-url';
+import { INTERVAL_FEATURE_URL } from './+01-interval/interval.feature-url';
+import { MOUSE_MOVE_FEATURE_URL } from './+02-mouse-move/mouse-move.feature-url';
 
 @Component({
   selector: 'app-root',
@@ -15,8 +16,8 @@ import { INTERVAL_FEATURE_URL } from './+ex-01-interval/interval.feature-url';
     <hr>
     <router-outlet></router-outlet>
 
-<!--    <app-footer></app-footer>-->
-    <app-footer-no-cd></app-footer-no-cd>
+    <app-footer></app-footer>
+<!--    <app-footer-no-cd></app-footer-no-cd>-->
   `
 })
 export class AppComponent {
@@ -28,6 +29,10 @@ export class AppComponent {
     {
       label: 'Interval with a getter',
       path: INTERVAL_FEATURE_URL + '/with-getter',
-    }
+    },
+    {
+      label: 'Mouse Move',
+      path: MOUSE_MOVE_FEATURE_URL,
+    },
   ];
 }

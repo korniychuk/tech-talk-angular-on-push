@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
-import { INTERVAL_FEATURE_URL } from './+ex-01-interval/interval.feature-url';
+
+import { INTERVAL_FEATURE_URL } from './+01-interval/interval.feature-url';
+import { MOUSE_MOVE_FEATURE_URL } from './+02-mouse-move/mouse-move.feature-url';
 
 const routes: Routes = [
   {
@@ -10,8 +12,12 @@ const routes: Routes = [
   },
   {
     path: INTERVAL_FEATURE_URL,
-    loadChildren: () => import('./+ex-01-interval/interval.module').then(m => m.IntervalModule),
-  }
+    loadChildren: () => import('./+01-interval/interval.module').then(m => m.IntervalModule),
+  },
+  {
+    path: MOUSE_MOVE_FEATURE_URL,
+    loadChildren: () => import('./+02-mouse-move/mouse-move.module').then(m => m.MouseMoveModule),
+  },
 ];
 
 @NgModule({
