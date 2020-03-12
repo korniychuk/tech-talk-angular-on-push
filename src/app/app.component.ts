@@ -24,10 +24,13 @@ import { TODO_LIST_2_FEATURE_URL } from './+52-todo-list-2/todo-list-2.feature-u
     <h1>Tech Talk: Zone.js | Angular Change Detection</h1>
     <hr>
     <div>
-        <button *ngFor="let route of routes"
+      <ng-container *ngFor="let route of routes">
+        <button *ngIf="route; else delimiter"
                 [routerLink]="route.path"
                 [routerLinkActive]="route.path"
         >{{ route.label }}</button>
+        <ng-template #delimiter><br></ng-template>
+      </ng-container>
     </div>
     <hr>
     <router-outlet></router-outlet>
@@ -50,6 +53,7 @@ export class AppComponent {
       label: 'Other microtasks',
       path: OTHER_MICROTASKS_FEATURE_URL,
     },
+    undefined,
     {
       label: 'Mouse Move',
       path: MOUSE_MOVE_FEATURE_URL,
@@ -70,6 +74,7 @@ export class AppComponent {
       label: 'OnPush | Input change | nested 2',
       path: INPUT_CHANGE_NESTED_2_FEATURE_URL,
     },
+    undefined,
     {
       label: 'OnPush | Event',
       path: EVENT_FEATURE_URL,
@@ -78,6 +83,7 @@ export class AppComponent {
       label: 'OnPush | Event from Children',
       path: EVENT_CHILDREN_FEATURE_URL,
     },
+    undefined,
     {
       label: 'On Push | Run Explicitly',
       path: RUN_EXPLICITLY_FEATURE_URL,
@@ -86,6 +92,7 @@ export class AppComponent {
       label: 'On Push | Run Explicitly via ApplicationRef.tick()',
       path: RUN_EXPLICITLY_VIA_TICK_FEATURE_URL,
     },
+    undefined,
     {
       label: 'On Push | Async Pipe',
       path: ASYNC_PIPE_FEATURE_URL,
@@ -94,6 +101,7 @@ export class AppComponent {
       label: 'On Push | Async Pipe | Interval',
       path: ASYNC_PIPE_INTERVAL_FEATURE_URL,
     },
+    undefined,
     {
       label: 'Tabs',
       path: TABS_FEATURE_URL,
@@ -110,5 +118,6 @@ export class AppComponent {
       label: 'Todo List 2',
       path: TODO_LIST_2_FEATURE_URL,
     },
+    undefined,
   ];
 }
