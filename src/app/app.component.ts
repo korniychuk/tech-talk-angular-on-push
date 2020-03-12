@@ -15,6 +15,7 @@ import { ASYNC_PIPE_FEATURE_URL } from './+41-on-push-async-pipe/async-pipe.feat
 import { ASYNC_PIPE_INTERVAL_FEATURE_URL } from './+42-on-push-async-pipe-setinterval/async-pipe-interval.feature-url';
 import { TABS_FEATURE_URL } from './+51-tabs/tabs.feature-url';
 import { TABS_2_FEATURE_URL } from './+51-tabs-2/tabs-2.feature-url';
+import { TODO_LIST_FEATURE_URL } from './+52-todo-list/todo-list.feature-url';
 
 @Component({
   selector: 'app-root',
@@ -99,6 +100,10 @@ export class AppComponent {
     {
       label: 'Tabs 2',
       path: TABS_2_FEATURE_URL,
+    },
+    {
+      label: 'Todo List',
+      path: TODO_LIST_FEATURE_URL,
     },
   ];
 }
