@@ -18,6 +18,7 @@ import { TABS_FEATURE_URL } from './+51-tabs/tabs.feature-url';
 import { TABS_2_FEATURE_URL } from './+51-tabs-2/tabs-2.feature-url';
 import { TODO_LIST_FEATURE_URL } from './+52-todo-list/todo-list.feature-url';
 import { TODO_LIST_2_FEATURE_URL } from './+52-todo-list-2/todo-list-2.feature-url';
+import { IS_STABLE_FEATURE_URL } from './+62-is-stable/is-stable.feature-url';
 
 const routes: Routes = [
   {
@@ -93,6 +94,10 @@ const routes: Routes = [
   {
     path: TODO_LIST_2_FEATURE_URL,
     loadChildren: () => import('./+52-todo-list-2/todo-list-2.module').then(m => m.TodoList2Module),
+  },
+  {
+    path: IS_STABLE_FEATURE_URL,
+    loadChildren: () => import('./+62-is-stable/is-stable.module').then(m => m.IsStableModule),
   },
 ];
 

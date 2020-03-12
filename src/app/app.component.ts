@@ -17,6 +17,7 @@ import { TABS_FEATURE_URL } from './+51-tabs/tabs.feature-url';
 import { TABS_2_FEATURE_URL } from './+51-tabs-2/tabs-2.feature-url';
 import { TODO_LIST_FEATURE_URL } from './+52-todo-list/todo-list.feature-url';
 import { TODO_LIST_2_FEATURE_URL } from './+52-todo-list-2/todo-list-2.feature-url';
+import { IS_STABLE_FEATURE_URL } from './+62-is-stable/is-stable.feature-url';
 
 @Component({
   selector: 'app-root',
@@ -119,5 +120,9 @@ export class AppComponent {
       path: TODO_LIST_2_FEATURE_URL,
     },
     undefined,
+    {
+      label: 'Is Stable',
+      path: IS_STABLE_FEATURE_URL,
+    },
   ];
 }
