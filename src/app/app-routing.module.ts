@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 
 import { INTERVAL_FEATURE_URL } from './+01-interval/interval.feature-url';
 import { MOUSE_MOVE_FEATURE_URL } from './+02-mouse-move/mouse-move.feature-url';
@@ -17,6 +17,7 @@ import { ASYNC_PIPE_INTERVAL_FEATURE_URL } from './+42-on-push-async-pipe-setint
 import { TABS_FEATURE_URL } from './+51-tabs/tabs.feature-url';
 import { TABS_2_FEATURE_URL } from './+51-tabs-2/tabs-2.feature-url';
 import { TODO_LIST_FEATURE_URL } from './+52-todo-list/todo-list.feature-url';
+import { TODO_LIST_2_FEATURE_URL } from './+52-todo-list-2/todo-list-2.feature-url';
 
 const routes: Routes = [
   {
@@ -88,6 +89,10 @@ const routes: Routes = [
   {
     path: TODO_LIST_FEATURE_URL,
     loadChildren: () => import('./+52-todo-list/todo-list.module').then(m => m.TodoListModule),
+  },
+  {
+    path: TODO_LIST_2_FEATURE_URL,
+    loadChildren: () => import('./+52-todo-list-2/todo-list-2.module').then(m => m.TodoList2Module),
   },
 ];
 
